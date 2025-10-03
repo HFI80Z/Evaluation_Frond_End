@@ -9,4 +9,4 @@ Petit projet d’évaluation front-end réalisé avec **HTML, CSS et JavaScript*
 
 ## Démo
 
-Peut être publié via **GitHub Pages** pour visualisation en ligne.
+**GitHub Pages** pour visualisation en ligne
