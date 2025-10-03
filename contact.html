@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>WebCraft – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulaire de contact WebCraft.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-neon">
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" width="32" height="32" alt="Logo WebCraft">
+        <span>WebCraft</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero neon small" aria-hidden="true">
+      <div class="gradient-bg"></div><div class="waves"></div>
+    </div>
+
+    <section class="container stack" aria-labelledby="title-contact">
+      <h1 id="title-contact">Nous contacter</h1>
+      <p class="muted">Un projet ? Écrivez-nous.</p>
+
+      <form id="contactForm" class="card glass form" novalidate>
+        <div class="field">
+          <label for="name">Nom <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" required aria-required="true" autocomplete="name">
+          <small id="err-name" class="error" role="alert" hidden>Nom requis</small>
+        </div>
+        <div class="field">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required aria-required="true" autocomplete="email">
+          <small id="err-email" class="error" role="alert" hidden>Email invalide</small>
+        </div>
+        <div class="field">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+          <small id="err-message" class="error" role="alert" hidden>Message requis</small>
+        </div>
+        <button type="submit" class="btn primary">Envoyer</button>
+        <p id="formSuccess" class="alert alert-success" role="status" hidden>Message envoyé (simulation) ✅</p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer glass">
+      <div class="container footer-inner"><p>© <span id="year"></span> WebCraft.</p></div>
+    </footer>
+
+  <script defer src="js/contact.js"></script>
+</body>
+</html>

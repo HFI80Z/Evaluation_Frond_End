@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>WebCraft – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio interactif WebCraft : projets filtrables, détails en modal.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-neon">
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="site-header glass">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" width="32" height="32" alt="Logo WebCraft">
+        <span>WebCraft</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a aria-current="page" href="index.html">Accueil</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero neon" aria-labelledby="hero-title">
+      <div class="gradient-bg" aria-hidden="true"></div>
+      <div class="waves" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Créez des interfaces qui <span class="shine">captivent</span>.</h1>
+          <p class="muted">Parcourez nos réalisations et filtrez par technologie. Détails disponibles sans rechargement.</p>
+          <div class="cta">
+            <a class="btn primary" href="#portfolio">Voir le portfolio</a>
+            <a class="btn ghost" href="contact.html">Nous écrire</a>
+          </div>
+        </div>
+        <div class="hero-preview glass" aria-hidden="true">
+          <div class="preview-grid">
+            <div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTRES -->
+    <section class="container stack" aria-labelledby="filters-title">
+      <h2 id="filters-title">Filtrer par technologie</h2>
+      <div id="filters" class="chips" role="group" aria-label="Filtres de technologies"></div>
+
+      <div class="status" aria-live="polite" aria-atomic="true">
+        <span id="loader" class="loader" hidden>Chargement…</span>
+        <span id="error" class="alert alert-error" role="alert" hidden></span>
+        <span id="empty" class="alert" hidden>Aucun projet pour ce filtre.</span>
+      </div>
+    </section>
+
+    <!-- GRID -->
+    <section id="portfolio" class="container stack" aria-labelledby="portfolio-title">
+      <h2 id="portfolio-title">Nos projets</h2>
+      <div id="grid" class="grid" role="list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer glass">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> WebCraft.</p>
+      <nav aria-label="Réseaux (simulés)">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">Dribbble</a>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog id="projectDialog" aria-labelledby="dialog-title" class="glass">
+    <article id="dialogContent" aria-labelledby="dialog-title">
+      <h3 id="dialog-title">Détails du projet</h3>
+    </article>
+    <form method="dialog">
+      <button type="submit" class="btn ghost">Fermer</button>
+    </form>
+  </dialog>
+
+  <script defer src="js/app.js"></script>
+</body>
+</html>
